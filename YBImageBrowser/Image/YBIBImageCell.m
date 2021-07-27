@@ -127,15 +127,20 @@
     // '0.001' is admissible error.
 #warning - change frame by chenggong
     if (ABS(scale) <= 0.001) {
-//        self.imageScrollView.imageView.frame = imageViewFrame;
-        self.imageScrollView.imageView.frame = CGRectMake(0, 0, image.size.width, image.size.height);;
-        self.imageScrollView.imageView.center = self.imageScrollView.center;
+        [self configImageFrame:imageViewFrame image:image];
     } else {
         [UIView animateWithDuration:0.25 animations:^{
-//        self.imageScrollView.imageView.frame = imageViewFrame;
-            self.imageScrollView.imageView.frame = CGRectMake(0, 0, image.size.width, image.size.height);;
-            self.imageScrollView.imageView.center = self.imageScrollView.center;
+            [self configImageFrame:imageViewFrame image:image];
         }];
+    }
+}
+
+- (void)configImageFrame:(CGRect)frame image:(UIImage *)image {
+    if (image.size.width > frame.size.width) {
+        self.imageScrollView.imageView.frame = frame;
+    }else{
+        self.imageScrollView.imageView.frame = CGRectMake(0, 0, image.size.width, image.size.height);
+        self.imageScrollView.imageView.center = self.imageScrollView.center;
     }
 }
 
