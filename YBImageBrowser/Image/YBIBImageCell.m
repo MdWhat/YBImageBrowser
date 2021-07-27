@@ -125,11 +125,16 @@
         scale = 0;
     }
     // '0.001' is admissible error.
+#warning - change frame by chenggong
     if (ABS(scale) <= 0.001) {
-        self.imageScrollView.imageView.frame = imageViewFrame;
+//        self.imageScrollView.imageView.frame = imageViewFrame;
+        self.imageScrollView.imageView.frame = CGRectMake(0, 0, image.size.width, image.size.height);;
+        self.imageScrollView.imageView.center = self.imageScrollView.center;
     } else {
         [UIView animateWithDuration:0.25 animations:^{
-            self.imageScrollView.imageView.frame = imageViewFrame;
+//        self.imageScrollView.imageView.frame = imageViewFrame;
+            self.imageScrollView.imageView.frame = CGRectMake(0, 0, image.size.width, image.size.height);;
+            self.imageScrollView.imageView.center = self.imageScrollView.center;
         }];
     }
 }
