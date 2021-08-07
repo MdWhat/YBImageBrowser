@@ -70,6 +70,7 @@
 		23F26AD222D7208700C27C21 /* YBIBVideoActionBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 23F26AD122D7208700C27C21 /* YBIBVideoActionBar.m */; };
 		23F5A00D23161D51003F0FAE /* YBIBDefaultWebImageMediator.m in Sources */ = {isa = PBXBuildFile; fileRef = 23F5A00C23161D51003F0FAE /* YBIBDefaultWebImageMediator.m */; };
 		23FF103622F6B6FC0091331F /* TestFController.m in Sources */ = {isa = PBXBuildFile; fileRef = 23FF103522F6B6FC0091331F /* TestFController.m */; };
+		3EE737D126BE2CA7002C8AF1 /* YYAnimatedImageView+Layer.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EE737D026BE2CA7002C8AF1 /* YYAnimatedImageView+Layer.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -219,6 +220,8 @@
 		23FC590B23B05EBD00F42054 /* YBIBVideoCell+Internal.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "YBIBVideoCell+Internal.h"; sourceTree = "<group>"; };
 		23FF103422F6B6FC0091331F /* TestFController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TestFController.h; sourceTree = "<group>"; };
 		23FF103522F6B6FC0091331F /* TestFController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TestFController.m; sourceTree = "<group>"; };
+		3EE737CF26BE2CA7002C8AF1 /* YYAnimatedImageView+Layer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "YYAnimatedImageView+Layer.h"; sourceTree = "<group>"; };
+		3EE737D026BE2CA7002C8AF1 /* YYAnimatedImageView+Layer.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "YYAnimatedImageView+Layer.m"; sourceTree = "<group>"; };
 		97542AA3FE46C41411B15C5D /* Pods_YBImageBrowserDemo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_YBImageBrowserDemo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B7455F1D491BFCA198544CA1 /* Pods-YBImageBrowserDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YBImageBrowserDemo.debug.xcconfig"; path = "Target Support Files/Pods-YBImageBrowserDemo/Pods-YBImageBrowserDemo.debug.xcconfig"; sourceTree = "<group>"; };
 		F2A1E10DD2C568E5493980E0 /* Pods-YBImageBrowserDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YBImageBrowserDemo.release.xcconfig"; path = "Target Support Files/Pods-YBImageBrowserDemo/Pods-YBImageBrowserDemo.release.xcconfig"; sourceTree = "<group>"; };
@@ -339,6 +342,8 @@
 				23ABA29B22D0BAB600535F6A /* YBIBInteractionProfile.m */,
 				23ABA29C22D0BAB600535F6A /* YBImage.h */,
 				23ABA29D22D0BAB600535F6A /* YBImage.m */,
+				3EE737CF26BE2CA7002C8AF1 /* YYAnimatedImageView+Layer.h */,
+				3EE737D026BE2CA7002C8AF1 /* YYAnimatedImageView+Layer.m */,
 			);
 			path = Image;
 			sourceTree = "<group>";
@@ -781,6 +786,7 @@
 				23ABA2C822D0CAE200535F6A /* YBIBTopView.m in Sources */,
 				23ABA2B522D0BAB700535F6A /* YBIBImageCache.m in Sources */,
 				23028E1022DD6EB500C745ED /* TestToolViewHandler.m in Sources */,
+				3EE737D126BE2CA7002C8AF1 /* YYAnimatedImageView+Layer.m in Sources */,
 				23ABA2B222D0BAB700535F6A /* YBIBSentinel.m in Sources */,
 				231F048922A8A3DF00C335FE /* MainNavigationController.m in Sources */,
 				23B3270122A768F4008BFF5D /* AppDelegate.m in Sources */,
@@ -967,7 +973,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = UU8H9EQ986;
+				DEVELOPMENT_TEAM = H74T3QB9BW;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/YBImageBrowserDemo/PrefixHeader.pch";
 				INFOPLIST_FILE = YBImageBrowserDemo/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
@@ -975,7 +981,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = yangbo.YBImageBrowserDemo2;
+				PRODUCT_BUNDLE_IDENTIFIER = com.opluxury.ios;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

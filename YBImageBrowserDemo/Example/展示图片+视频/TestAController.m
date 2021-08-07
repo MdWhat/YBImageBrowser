@@ -22,7 +22,8 @@
     self = [super init];
     if (self) {
         NSMutableArray *array = [NSMutableArray array];
-        [array addObjectsFromArray:[BaseFileManager imageURLs]];
+        [array addObjectsFromArray:@[@"http://img-oscs.opechk.com/good_img/4ac137ecf84925d5d46785d254fbc124.WEBP"]];
+//        [array addObjectsFromArray:[BaseFileManager imageURLs]];
         [array addObjectsFromArray:[BaseFileManager imageNames]];
         [array addObjectsFromArray:[BaseFileManager videos]];
         self.dataArray = array;
