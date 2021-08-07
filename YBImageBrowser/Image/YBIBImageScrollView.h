@@ -29,4 +29,8 @@ typedef NS_ENUM(NSInteger, YBIBScrollImageType) {
 
 @end
 
+@interface YYAnimatedImageView (Layer)
+
+@end
+
 NS_ASSUME_NONNULL_END
