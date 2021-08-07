@@ -113,10 +113,10 @@
     CGFloat maxZoomScale = imageType == YBIBScrollImageTypeThumb ? 1 : [data.layout yb_maximumZoomScaleWithContainerSize:containerSize imageSize:imageSize orientation:orientation];
     
     // 'zoomScale' must set before 'contentSize' and 'imageView.frame'.
-    self.imageScrollView.zoomScale = 1;
+    self.imageScrollView.zoomScale = CGFLOAT_MAX;
     self.imageScrollView.contentSize = contentSize;
     self.imageScrollView.minimumZoomScale = 1;
-    self.imageScrollView.maximumZoomScale = maxZoomScale;
+    self.imageScrollView.maximumZoomScale = maxZoomScale*3;
     
     CGFloat scale;
     if (previousImageSize.width > 0 && previousImageSize.height > 0) {
@@ -136,10 +136,16 @@
 }
 
 - (void)configImageFrame:(CGRect)frame image:(UIImage *)image {
+    CGFloat w = image.size.width, h = image.size.height;
+    if (image.size.width < 90 || image.size.height < 90) {
+        w = 90;
+        h = 90;
+    }
+    
     if (image.size.width > frame.size.width) {
         self.imageScrollView.imageView.frame = frame;
     }else{
-        self.imageScrollView.imageView.frame = CGRectMake(0, 0, image.size.width, image.size.height);
+        self.imageScrollView.imageView.frame = CGRectMake(0, 0, w, h);
         self.imageScrollView.imageView.center = self.imageScrollView.center;
     }
 }
